@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Circular Array</title>
+</head>
+
+<body>
+<script>
+// javascript program to demonstrate use of circular 
+// array using extra memory space
+ 
+
+    // function to print circular list
+
+    // starting from given index ind.
+
+    function print(a, n, ind)
+
+    {
+ 
+
+        // print from ind-th index to
+
+        // (n+i)th index.
+
+        for (var i = ind; i < n + ind; i++)
+
+            document.write(a[parseInt(i % n)] + " ");
+
+    }
+ 
+
+    // Driver code
+
+        var a =[ 'A', 'B', 'C', 'D', 'E', 'F' ];
+
+        var n = 6;
+
+        print(a, n, 3);
+ 
+// This code is contributed by Rajput-Ji 
+</script>
+</body>
+
+</html>

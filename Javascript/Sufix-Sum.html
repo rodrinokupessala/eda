@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sufix sum</title>
+</head>
+
+<body>
+<script>
+	// JavaScript code for the above approach
+
+	// Function to create suffix sum array
+	function createSuffixSum(arr, n)
+	{
+	
+		// Create an array to store the suffix sum
+		let suffixSum = new Array(n).fill(0);
+
+		// Initialize the last element of
+		// suffix sum array with last element
+		// of original array
+		suffixSum[n - 1] = arr[n - 1];
+
+		// Traverse the array from n-2 to 0
+		for (let i = n - 2; i >= 0; i--)
+
+			// Adding current element
+			// with previous element from back
+			suffixSum[i] = suffixSum[i + 1] + arr[i];
+
+		// Return the computed suffixSum array
+		return suffixSum;
+	}
+
+	// Driver Code
+	let arr = [10, 14, 16, 20];
+	let N = arr.length;
+
+	// Function call to fill suffix sum array
+	let suffixSum = createSuffixSum(arr, N);
+
+	// Printing the computed suffix sum array
+	document.write("Suffix sum array: ")
+	for (let i = 0; i < N; i++)
+		document.write(suffixSum[i] + " ");
+
+	// This code is contributed by Potta Lokesh
+</script>
+
+</body>
+
+</html>
