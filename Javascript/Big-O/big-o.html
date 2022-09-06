@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+//Rule of coefficient
+function ruleCofficient(n){
+  var count=0;
+  for(var i=0;i<n;i++){
+    count +=1;
+  }
+  return count;
+}
+//Print
+//document.write("Count: ",ruleCofficient(10))
+//Sum rule
+function ruleSum(n){
+  var count=0;
+  for(var i=0;i<n;i++){
+    count+=1;
+    console.log("Count.level 1:",count)
+    
+  }
+  for(var i=0;i<5*n;i++){
+    count+=1;
+    console.log("Count level 2 :",count)
+  }
+  return count
+}
+//print
+//document.write("Count sum rule: ",ruleSum(10))
+//Produt rule Multiplication
+
+function ruleProdut(n){
+  var count =0;
+  for(var i=0;i<n;i++){
+    count+=1;
+    console.log("Level 1 of produt rule:",count)
+    for(var i=0;i<5*n;i++){
+      count+=1;
+      console.log("Level 2 of Product rule:",count)
+    }
+  }
+  return count;
+}
+//Print 
+//document.write("Produt rule: ",ruleProdut(10))
+//Polinomial Rule
+function rulePolinomial(n){
+  var count =0;
+  for (var i=0;i<n*n;i++){
+    count +=1;
+  }
+  return count;
+  
+}
+//Print 
+document.write("Polinomial rule:",rulePolinomial(10))
+</script>
+</body>
+
+</html>
